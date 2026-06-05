@@ -39939,7 +39939,7 @@ async function executeCommand() {
     try {
         const apiId = getInput("api-id", { required: true });
         const stage = getInput("stage", { required: true });
-        const file = getInput("file", { required: true });
+        const outputFile = getInput("output-file", { required: true });
         const apiKey = getInput("api-key", { required: true });
         const cloudUrl = getInput("cloud-url") || null;
         const args = [
@@ -39949,8 +39949,8 @@ async function executeCommand() {
             apiId,
             "--stage",
             stage,
-            "--file",
-            file,
+            "--output-file",
+            outputFile,
         ];
         if (cloudUrl) {
             args.push("--cloud-url", cloudUrl);

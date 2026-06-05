@@ -9,7 +9,7 @@ A GitHub Action that downloads a GraphQL schema from a stage in the Nitro regist
   with:
     api-id: <api-id>
     stage: <stage>
-    file: ./schema.graphql
+    output-file: ./schema.graphql
     api-key: <api-key>
     # Optional
     cloud-url: <cloud-url>
@@ -21,7 +21,7 @@ A GitHub Action that downloads a GraphQL schema from a stage in the Nitro regist
 | ----------- | -------- | ----------------------------------------------- |
 | `api-id`    | Yes      | The ID of the API                               |
 | `stage`     | Yes      | The name of the stage                           |
-| `file`      | Yes      | The file where the schema will be downloaded to |
+| `output-file` | Yes    | The file where the schema will be downloaded to |
 | `api-key`   | Yes      | API key for authentication                      |
 | `cloud-url` | No       | The URL of the Nitro registry                   |
 

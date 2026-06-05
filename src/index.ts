@@ -9,7 +9,7 @@ async function executeCommand(): Promise<void> {
   try {
     const apiId = core.getInput("api-id", { required: true });
     const stage = core.getInput("stage", { required: true });
-    const file = core.getInput("file", { required: true });
+    const outputFile = core.getInput("output-file", { required: true });
     const apiKey = core.getInput("api-key", { required: true });
     const cloudUrl = core.getInput("cloud-url") || null;
 
@@ -20,8 +20,8 @@ async function executeCommand(): Promise<void> {
       apiId,
       "--stage",
       stage,
-      "--file",
-      file,
+      "--output-file",
+      outputFile,
     ];
 
     if (cloudUrl) {

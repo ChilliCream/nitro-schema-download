@@ -12,7 +12,7 @@ inputs:
   stage:
     description: "The name of the stage"
     required: true
-  file:
+  output-file:
     description: "The file where the schema will be downloaded to"
     required: true
   api-key:
