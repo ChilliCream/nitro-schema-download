@@ -1,0 +1,28 @@
+name: "Nitro Schema Download"
+description: "Downloads a GraphQL schema from a stage in the Nitro registry"
+author: "ChilliCream"
+branding:
+  icon: "download-cloud"
+  color: "blue"
+
+inputs:
+  api-id:
+    description: "The ID of the API"
+    required: true
+  stage:
+    description: "The name of the stage"
+    required: true
+  file:
+    description: "The file where the schema will be downloaded to"
+    required: true
+  api-key:
+    description: "API key for authentication"
+    required: true
+    secret: true
+  cloud-url:
+    description: "The URL of the Nitro registry"
+    required: false
+
+runs:
+  using: "node24"
+  main: "dist/index.js"
